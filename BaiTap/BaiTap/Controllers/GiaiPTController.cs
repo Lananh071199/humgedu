@@ -17,5 +17,12 @@ namespace BaiTap.Controllers
         }
         
         [HttpPost] 
+        public ActionResult TimNghiem(string soA,string soB)
+        {
+            double so1 = Convert.ToDouble(soA);
+            double so2 = Convert.ToDouble(soB);
+            ViewBag.NghiemPT = gpt.GiaiPTB1(so1, so2);
+            return View();
+        }
     }
 }
