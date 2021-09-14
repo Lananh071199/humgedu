@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GiaiPTController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\infoPersonsController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -142,8 +143,13 @@
     <Compile Include="Migrations\202109100721072_personcreate.Designer.cs">
       <DependentUpon>202109100721072_personcreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109140639470_hehe.cs" />
+    <Compile Include="Migrations\202109140639470_hehe.Designer.cs">
+      <DependentUpon>202109140639470_hehe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GiaiPTBac1.cs" />
+    <Compile Include="Models\infoPerson.cs" />
     <Compile Include="Models\LTQLdbContext.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,6 +194,11 @@
     <Content Include="Views\GiaiPT\TimNghiem.cshtml" />
     <Content Include="Views\Person\Create.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\infoPersons\Create.cshtml" />
+    <Content Include="Views\infoPersons\Delete.cshtml" />
+    <Content Include="Views\infoPersons\Details.cshtml" />
+    <Content Include="Views\infoPersons\Edit.cshtml" />
+    <Content Include="Views\infoPersons\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -211,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109100721072_personcreate.resx">
       <DependentUpon>202109100721072_personcreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109140639470_hehe.resx">
+      <DependentUpon>202109140639470_hehe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

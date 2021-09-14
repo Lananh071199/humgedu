@@ -13,6 +13,7 @@ namespace BaiTap.Models
         }
 
         public virtual DbSet<Person> PerSons { get; set; }
+        public virtual DbSet<infoPerson> InfoPeople { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
