@@ -148,6 +148,7 @@
       <DependentUpon>202109140639470_hehe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AutogenKey.cs" />
     <Compile Include="Models\GiaiPTBac1.cs" />
     <Compile Include="Models\infoPerson.cs" />
     <Compile Include="Models\LTQLdbContext.cs" />
