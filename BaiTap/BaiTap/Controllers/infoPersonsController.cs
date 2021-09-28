@@ -13,6 +13,7 @@ namespace BaiTap.Controllers
     public class infoPersonsController : Controller
     {
         private LTQLdbContext db = new LTQLdbContext();
+        AutogenKey strPro = new AutogenKey();
 
         // GET: infoPersons
         public ActionResult Index()
@@ -38,7 +39,18 @@ namespace BaiTap.Controllers
         // GET: infoPersons/Create
         public ActionResult Create()
         {
-            return View();
+            string newID = "";
+
+            var emp = db.InfoPeople.ToList().OrderByDescending(m => m.PersonID);
+            if(emp.Count()==0)
+            {
+                newID = "PERS0001";
+            }    
+            else {
+                newID  = strPro.AutogenerateKey(emp.FirstOrDefault().PersonID);
+            }
+            ViewBag.newPerID = newID;
+                 return View();
         }
 
         // POST: infoPersons/Create

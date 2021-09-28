@@ -10,7 +10,7 @@ namespace BaiTap.Controllers
     public class PersonController : Controller
     {
         LTQLdbContext db = new LTQLdbContext();
-        AutogenKey genkey = new AutogenKey();
+        
         // GET: Person
         public ActionResult Index()
         {
@@ -19,9 +19,7 @@ namespace BaiTap.Controllers
 
         public ActionResult Create()
         {
-            var PsID = db.PerSons.OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
-            var NewID = genkey.generateKey(PsID, 2);
-            ViewBag.newperID = NewID;
+           
             return View();
         }
         [HttpPost]
