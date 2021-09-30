@@ -8,7 +8,7 @@ namespace BaiTap.Models
 {
     public class AutogenKey
     {
-        public string AutogenerateKey (string id, int number)
+        public string AutogenerateKey (string id)
         {
              string strkey = "";
             // kiểm tra giá trị ID truyền vào là rỗng hay không
@@ -33,9 +33,5 @@ namespace BaiTap.Models
             return strkey;
         }
 
-        internal string AutogenerateKey(string personID)
-        {
-            throw new NotImplementedException();
-        }
-    }
+            }
 }

@@ -39,16 +39,8 @@ namespace BaiTap.Controllers
         // GET: infoPersons/Create
         public ActionResult Create()
         {
-            string newID = "";
-
-            var emp = db.InfoPeople.ToList().OrderByDescending(m => m.PersonID);
-            if(emp.Count()==0)
-            {
-                newID = "PERS0001";
-            }    
-            else {
-                newID  = strPro.AutogenerateKey(emp.FirstOrDefault().PersonID);
-            }
+            var PsID = db.PerSons.OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
+            var newID = strPro.AutogenerateKey(PsID);
             ViewBag.newPerID = newID;
                  return View();
         }
