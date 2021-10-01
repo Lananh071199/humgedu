@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GiaiPTController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\infoPersonsController.cs" />
@@ -147,8 +148,14 @@
     <Compile Include="Migrations\202109140639470_hehe.Designer.cs">
       <DependentUpon>202109140639470_hehe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110010745298_test.cs" />
+    <Compile Include="Migrations\202110010745298_test.Designer.cs">
+      <DependentUpon>202110010745298_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AutogenKey.cs" />
+    <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\GiaiPTBac1.cs" />
     <Compile Include="Models\infoPerson.cs" />
     <Compile Include="Models\LTQLdbContext.cs" />
@@ -548,6 +555,8 @@
     <Content Include="Views\infoPersons\Details.cshtml" />
     <Content Include="Views\infoPersons\Edit.cshtml" />
     <Content Include="Views\infoPersons\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -574,6 +583,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109140639470_hehe.resx">
       <DependentUpon>202109140639470_hehe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010745298_test.resx">
+      <DependentUpon>202110010745298_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
