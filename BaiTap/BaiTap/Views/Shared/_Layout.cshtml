@@ -23,11 +23,13 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("GiaiPT", "Index", "GiaiPT")</li>
+                    <li>@Html.ActionLink("Theem Roles", "Index", "Roles")</li>
                     <li>@Html.ActionLink("Thêm PerSon", "Index", "infoPersons")</li>
                     <li>@Html.ActionLink("Register", "Register", "Account")</li>
                     <li>@Html.ActionLink("Login", "Login", "Account")</li>
-                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    <li>@Html.ActionLink("Logout", "Logout", "Account", new { Area = "" }, null)</li>
+                    <li>@Html.ActionLink("Admin", "Index", "HomeAdmin", new { Area = "Admins" }, null)</li>
+                    <li>@Html.ActionLink("Employees", "Index", "Homeemp", new { Area = "Employees" }, null)</li>
                 </ul>
             </div>
         </div>

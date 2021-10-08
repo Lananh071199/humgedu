@@ -18,5 +18,7 @@ namespace BaiTap.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
+
+        public System.Data.Entity.DbSet<BaiTap.Models.Role> Roles { get; set; }
     }
 }

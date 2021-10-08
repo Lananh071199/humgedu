@@ -128,11 +128,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admins\AdminsAreaRegistration.cs" />
+    <Compile Include="Areas\Admins\Controllers\HomeAdminController.cs" />
+    <Compile Include="Areas\Employees\Controllers\HomeEmpController.cs" />
+    <Compile Include="Areas\Employees\EmployeesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GiaiPTController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\infoPersonsController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,6 +157,14 @@
     <Compile Include="Migrations\202110010745298_test.Designer.cs">
       <DependentUpon>202110010745298_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110080150273_Create_role.cs" />
+    <Compile Include="Migrations\202110080150273_Create_role.Designer.cs">
+      <DependentUpon>202110080150273_Create_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110080159454_update_tabe_ac.cs" />
+    <Compile Include="Migrations\202110080159454_update_tabe_ac.Designer.cs">
+      <DependentUpon>202110080159454_update_tabe_ac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AutogenKey.cs" />
@@ -160,6 +173,8 @@
     <Compile Include="Models\infoPerson.cs" />
     <Compile Include="Models\LTQLdbContext.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\UsersRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +193,10 @@
     <Content Include="Scripts\ckeditor\ckeditor.asp" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
+    <Content Include="Areas\Admins\Views\web.config" />
+    <Content Include="Areas\Admins\Views\HomeAdmin\Index.cshtml" />
+    <Content Include="Areas\Employees\Views\web.config" />
+    <Content Include="Areas\Employees\Views\HomeEmp\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor_basic.js" />
@@ -555,11 +574,20 @@
     <Content Include="Views\infoPersons\Details.cshtml" />
     <Content Include="Views\infoPersons\Edit.cshtml" />
     <Content Include="Views\infoPersons\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Roles\Details.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admins\Data\" />
+    <Folder Include="Areas\Admins\Views\Shared\" />
+    <Folder Include="Areas\Employees\Data\" />
+    <Folder Include="Areas\Employees\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -586,6 +614,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110010745298_test.resx">
       <DependentUpon>202110010745298_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110080150273_Create_role.resx">
+      <DependentUpon>202110080150273_Create_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110080159454_update_tabe_ac.resx">
+      <DependentUpon>202110080159454_update_tabe_ac.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

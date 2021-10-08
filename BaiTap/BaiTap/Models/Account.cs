@@ -14,5 +14,7 @@ namespace BaiTap.Models
         [Required(ErrorMessage = "Tai Khoan Khong Chinh Xác"  )]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [StringLength(10)]
+        public string RoleID { get; set; }
     }
 }
